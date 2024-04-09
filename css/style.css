@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    grid-column-start: 2;
+    font-size: 18px;
+}
+.container{
+    display: grid;
+    grid-template-columns: 2fr repeat(12, 1fr) 2fr;
+    gap: 3%;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-column: 2/14;
+    height: 75px;
+}
+.nav{
+    width: 60%;
+    display: flex;
+    justify-content: space-between; }
+.nav__items{
+    width: 20%;
+}
+.main__img{
+    grid-column: 7/14; 
+}
+.main__text{
+    grid-column: 2/7;
+    display: flex;
+    flex-direction: column;
+    grid-row: 2/3;
+    justify-content:space-between;
+} 
+.main__img{
+    width: 100%;
+    height: 624px;
+}
+h1{
+    font-size: 25px;
+}
+h3{
+    font-size: 18px;
+}
+.main__p{
+    grid-column: 7/12;
+} 
+.main__sub_p{
+    grid-column: 2/7;
+}
+.main__img_small{
+    grid-column: 12/14;
+    height: 100%;
+}
+img{
+    width: 100%;
+}
+.logo{
+    width: auto;
+}
+.main__section_normal{
+    grid-column: 7/12;
+    display: grid;
+}
+.main__section_small{
+    grid-column: 12/14;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.section__img{
+    grid-row: 5;
+}
+.section__img1, .section__text1{
+    grid-column: 2/7;
+}
+.section__img2, .section__text2{
+    grid-column: 7/12;
+}
+.section__img3{
+    grid-column: 12/14;
+}
+.section__text1{
+    grid-row: 5;
+}
+.section__text2{
+    grid-row: 5;
+}
+.section__img1, .section__img2, .section__img3, .section__img4
+{
+    height: 100%;
+    grid-row: 4;
+}
+.section__img4{
+    grid-row: 5;
+    height: 322px;
+    width: 100%;
+    grid-column: 12/14;
+}
+.main__img_big2{
+    grid-column: 2/14;
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-column: 2/14;
+    height: 75px;
+}
+@media screen and (max-width:425px) {
+    .nav{
+        display: none;
+    }
+    .header, .logo, .nav, .nav__items, .main__text, .main__img,.main__img_big1, .main__img_big2,.main__sub_p, .main__p, .main__img_small, .section__img1, .section__img2, .section__img3, .section__img4, .section__text1, .section__text2, .footer, .main__img_small{
+        grid-column: 1;
+    }
+    .text__h{
+        font-size: 20px;
+        text-indent: 0;
+    }
+    .text__sub_h{
+        font-size: 18px;
+        text-indent: 0;
+        font-weight: normal;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+    }
+    .text__p{
+        font-size: 15px;
+    }
+    *{
+        grid-column-start: 1;
+        font-size: 15px;
+        text-indent: 10%;
+    }
+    .container{
+        grid-template-areas: 
+        "h h h h"
+        "ib ib ib ib"
+        "ib ib ib ib"
+        "mt mt mt mt"
+        "mp mp mp mp"
+        "is is is is"
+        "is is is is"
+        "ms ms ms ms"
+        "si1 si1 si1 si1"
+        "st1 st1 st1 st1"
+        "si2 si2 si2 si2"
+        "st2 st2 st2 st2"
+        "si3 si3 si4 si4"
+        "ib2 ib2 ib2 ib2"
+        "f f f f";
+        grid-template-columns: none;
+        width: 90%;
+        gap: 1%;
+    }
+    .main__text{
+        grid-area: mt;
+        height: 490px;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+    }
+    .main__img{
+        grid-area: ib;
+    }
+    .header{
+        grid-area: h;
+        justify-content: center;
+        height: 50px;
+        align-items: self-end;
+    }
+    .main__img_small .section__img1, .section__img2, .section__img3, .main__img{
+        width: 100%;
+    }
+    .main__p{
+        grid-area: mp;
+    } 
+    .main__sub_p{
+        grid-area: ms;
+    }
+    .main__img_small{
+        grid-area: is;
+    } 
+    .section__img1{
+        grid-area: si1;
+    }
+    .section__img2{
+        grid-area: si2;
+    }
+    .section__img3{
+        grid-area: si3;
+    }
+    .section__img4{
+        grid-area: si4;
+    }
+    .section__text1{
+        grid-area: st1
+    }
+    .section__text2{
+        grid-area: st2;
+    }
+    .main__img_big2{
+        grid-area: ib2;
+    }
+    .footer{
+        grid-area: f;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 50px;
+    }
+    .footer__p{
+        font-size: 10px;
+        text-indent: 0;
+    }
+}
